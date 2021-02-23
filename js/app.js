@@ -30,3 +30,35 @@ has_child.forEach(child => {
         sub.classList.toggle('show');
     });
 });
+// window onclick
+window.onclick = function(event){
+    openCloseDropdown(event);
+}
+
+// close all dropdown
+function closeAllDropdown(){
+    var dropdowns = document.querySelectorAll('.dropdown-expand');
+    dropdowns.forEach(drops => {
+        drops.classList.remove('dropdown-expand');
+    })
+}
+
+function openCloseDropdown(event){
+    if(!event.target.matches('.dropdown-toggle')){
+        // close dropdown when click outside menu
+        closeAllDropdown();
+    }
+    else{
+        var toggle = event.target.dataset.toggle;
+        //console.log(toggle);
+        var content = document.querySelector(`#${toggle}`);
+        //console.log(content);
+        if(content.classList.contains('dropdown-expand')){
+            closeAllDropdown();
+        }
+        else{
+            closeAllDropdown();
+            content.classList.add('dropdown-expand');
+        }
+    }
+}
