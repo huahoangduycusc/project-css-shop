@@ -62,3 +62,46 @@ function openCloseDropdown(event){
         }
     }
 }
+// tabcontent
+function closeTabContent(bool){
+    var tabContent = document.querySelectorAll('.tabcontent');
+    var tabLinks = document.querySelectorAll('.tablinks');
+    var i= 0;
+    var j = 0;
+    if(bool == false){
+        tabContent.forEach(item => {
+            item.style.display = "none";
+        });
+        tabLinks.forEach(item => {
+            item.classList.remove("active");
+        });
+        console.log("false");
+    }
+    else{
+        console.log("true");
+        tabContent.forEach(item => {
+            if(i != 0){
+                item.style.display = "none";
+            }
+            i++;
+        });
+        tabLinks.forEach(item => {
+            if(j != 0){
+                item.classList.remove("active");
+            }
+            j++;
+        });
+    }
+}
+var tabLinks = document.querySelectorAll(".tablinks");
+tabLinks.forEach(item => {
+    item.addEventListener('click',(e) => {
+        closeTabContent(false);
+        let tabContent = item.getAttribute("data-id");
+        //alert(tabContent);
+        item.classList.add('active');
+        document.querySelector("#"+tabContent).style.display = "block";
+
+    });
+});
+closeTabContent(true);
