@@ -69,16 +69,10 @@ function closeTabContent(bool){
     var i= 0;
     var j = 0;
     if(bool == false){
-        tabContent.forEach(item => {
-            item.style.display = "none";
-        });
-        tabLinks.forEach(item => {
-            item.classList.remove("active");
-        });
-        console.log("false");
+        tabContent.forEach(item => item.style.display = "none");
+        tabLinks.forEach(item => item.classList.remove("active"));
     }
     else{
-        console.log("true");
         tabContent.forEach(item => {
             if(i != 0){
                 item.style.display = "none";
@@ -105,3 +99,13 @@ tabLinks.forEach(item => {
     });
 });
 closeTabContent(true);
+// review product
+var productSmall = document.querySelectorAll(".product-review-small");
+var productMain = document.querySelector(".product-highlight");
+productSmall.forEach(item => {
+    item.addEventListener('click',(e) => {
+        productMain.src = item.src;
+        productSmall.forEach(small => small.classList.remove("active"));
+        item.classList.add("active");
+    });
+});

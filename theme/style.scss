@@ -542,6 +542,9 @@ header {
     width: 48%;
     .product-main {
       width: 100%;
+      img{
+        width: 100%;
+      }
     }
     .product-review {
       margin-top: 10px;
@@ -551,6 +554,15 @@ header {
         li {
           width: calc(100% / 3);
           margin-right: 10px;
+          cursor: pointer;
+          .product-review-small{
+            opacity: 0.6;
+            transition: all 0.4s ease;
+          }
+          .product-review-small.active{
+            opacity: 1;
+            box-shadow: 0 0 0 5px rgba(62, 226, 111, 0.5);
+          }
           &:last-child {
             margin-right: 0px;
           }
@@ -735,6 +747,122 @@ header {
       }
     }
   }
+}
+// product review
+.form-review{
+  margin-bottom: 10px;
+}
+.list-comments{
+  margin-top: 10px;
+  width: 100%;
+  .comment{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    .comment-avatar{
+      width: 50px;
+      height: 50px;
+      img{
+        border-radius: 50%;
+      }
+    }
+    .comment-content{
+      width: calc(100% - 70px);
+      word-wrap: break-word;
+      .comment-author{
+        a{
+          text-decoration: none;
+          transition: all 0.3s ease;
+          color: #333;
+          font-weight: 600;
+          &:hover{
+            color: #6eb48c;
+          }
+        }
+      }
+      .comment-time{
+        font-size: 13px;
+        color: #666;
+        font-style: italic;
+      }
+    }
+  }
+}
+@mixin label{
+  color: #939393;
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.comment-form-rating{
+  label{
+    @include label;
+  }
+  select{
+    padding: 12px 20px;
+    max-width: 200px;
+    border: 1px solid #DEDEDE;
+    margin-bottom: 28px;
+    font-size: 14px;
+    width: 100%;
+    font-weight: normal;
+    max-height: 50px;
+    background: none;
+    outline: none;
+    transition: all 0.4s ease-out;
+    &:focus{
+      outline: none;
+      box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
+    }
+  }
+}
+.comment-form-comment{
+  label{
+    @include label();
+  }
+  textarea{
+    padding: 15px 20px;
+    border: 1px solid #DEDEDE;
+    width: 100%;
+    max-width: 100%;
+    height: 120px;
+    font-size: 12px;
+    color: #313131;
+    transition: all 0.3s ease-out;
+    margin-bottom: 28px;
+    line-height: 20px;
+    font-weight: 500;
+    outline: none;
+    vertical-align: top;
+    &:focus{
+      box-shadow: 0 0 0 5px rgba(62, 181, 250, 0.2);
+    }
+  }
+}
+.submit{
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #F5F5F5;
+    border-radius: 0;
+    font-size: 14px;
+    color: #313131;
+    transition: .3s;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    padding: 10px 15px 9px;
+    border: none;
+    outline: none;
+    min-width: 90px;
+    &:hover{
+      background: #6eb48c;
+      color: #fff;
+    }
 }
 /* layout for shop index */
 .shop-layout-left {
