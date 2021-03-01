@@ -1852,6 +1852,102 @@ img {
   position: relative;
 }
 
+/*list order*/
+.list-orders {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.list-orders table {
+  width: 100%;
+  background: #fff;
+}
+
+.list-orders table th, .list-orders table td {
+  text-align: left;
+  padding: 10px 9px;
+  border-bottom: 1px solid #ddd;
+}
+
+.list-orders table tr:last-child td {
+  border-bottom: 1px solid transparent;
+}
+
+.total {
+  background: #6eb48c;
+  padding: 10px 9px;
+  text-align: center;
+  color: #fff;
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.total span {
+  font-weight: 600;
+}
+
+.table {
+  margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.see-order {
+  border: none;
+  outline: none;
+  background: #6eb48c;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.see-order:hover {
+  background: tomato;
+}
+
+.waiting {
+  background: #f7c420;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.waiting i {
+  padding-right: 4px;
+}
+
+.cancel {
+  color: #fff;
+  background: #e04b4b;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.cancel i {
+  padding-right: 4px;
+}
+
+.success {
+  background: #3dcc68;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.success i {
+  padding-right: 4px;
+}
+
 /* footer content */
 .clear-footer {
   height: 1px;
@@ -1867,5 +1963,32 @@ footer {
   width: 100%;
   padding: 50px 40px;
   text-align: center;
+}
+
+.blog-list {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.blog-list .blog-item {
+  width: calc(100% / 3 - 20px);
+  margin-right: 20px;
+  text-align: center;
+}
+
+.blog-list .blog-item h3 {
+  margin-top: 5px;
+}
+
+.blog-list .blog-item .blog-time {
+  display: block;
+  margin-top: 10px;
+  color: #666;
 }
 /*# sourceMappingURL=style.css.map */
