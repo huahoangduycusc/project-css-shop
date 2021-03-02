@@ -1948,6 +1948,58 @@ img {
   padding-right: 4px;
 }
 
+.center {
+  text-align: center;
+}
+
+.profile {
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.profile-avatar {
+  margin-bottom: 10px;
+}
+
+.profile-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profile-info table {
+  width: 100%;
+}
+
+.profile-info table td {
+  padding: 9px 12px;
+  border: 1px solid #dedede;
+}
+
+.profile-info table td:first-child {
+  width: 60px;
+}
+
+.profile-more {
+  margin-top: 10px;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 7px 9px;
+  margin-right: 5px;
+  background: #6eb48c;
+  color: #fff;
+}
+
+.btn-link:hover {
+  color: #fff;
+  background: #666;
+}
+
 /* footer content */
 .clear-footer {
   height: 1px;
