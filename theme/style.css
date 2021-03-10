@@ -694,7 +694,7 @@ header {
 }
 
 .product-sort .form-ordering::after {
-  content: '';
+  content: "";
   clear: both;
   display: table;
 }
@@ -1144,13 +1144,13 @@ header {
 .message-success .button {
   text-transform: uppercase;
   font-weight: bold;
-  background: #F5F5F5;
+  background: #f5f5f5;
   border-radius: 0;
   font-size: 12px;
   color: #313131;
   float: right;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
   text-align: center;
   margin: 0;
@@ -1167,7 +1167,7 @@ header {
 }
 
 .message-success:after {
-  content: '';
+  content: "";
   clear: both;
   display: table;
 }
@@ -1481,7 +1481,10 @@ header {
   color: #777;
 }
 
-.popular-post > .popular-item:not(:nth-child(1)) > .popular-item-info > h3.title {
+.popular-post
+> .popular-item:not(:nth-child(1))
+> .popular-item-info
+> h3.title {
   font-size: 1.55rem;
 }
 
@@ -1518,7 +1521,8 @@ header {
   width: 100%;
 }
 
-.footer-post-flex > .my-story > div, .footer-post-flex > .my-story > p {
+.footer-post-flex > .my-story > div,
+.footer-post-flex > .my-story > p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1551,7 +1555,11 @@ header {
   width: 50%;
 }
 
-.footer-post-flex > .recent-post > .recent-post-item > .recent-post-item-img > img {
+.footer-post-flex
+> .recent-post
+> .recent-post-item
+> .recent-post-item-img
+> img {
   width: 100%;
   padding-right: 0.5rem;
 }
@@ -1561,12 +1569,20 @@ header {
   padding-left: 0.5rem;
 }
 
-.footer-post-flex > .recent-post > .recent-post-item > .recent-post-item-infor > h2 {
+.footer-post-flex
+> .recent-post
+> .recent-post-item
+> .recent-post-item-infor
+> h2 {
   font-size: 1.4rem;
   font-weight: 600;
 }
 
-.footer-post-flex > .recent-post > .recent-post-item > .recent-post-item-infor > p {
+.footer-post-flex
+> .recent-post
+> .recent-post-item
+> .recent-post-item-infor
+> p {
   font-size: 1.3rem;
 }
 
@@ -1598,7 +1614,8 @@ header {
 
 /* media with mobile */
 @media only screen and (max-width: 768px) {
-  .body-content > .container > .content-left, .body-content > .container > .content-right {
+  .body-content > .container > .content-left,
+  .body-content > .container > .content-right {
     width: 100%;
     clear: both;
   }
@@ -1629,7 +1646,8 @@ header {
     display: block;
     z-index: 3;
   }
-  .view-post-layout > .content-left, .view-post-layout > .content-right {
+  .view-post-layout > .content-left,
+  .view-post-layout > .content-right {
     width: 100%;
     clear: both;
   }
@@ -1863,7 +1881,8 @@ img {
   background: #fff;
 }
 
-.list-orders table th, .list-orders table td {
+.list-orders table th,
+.list-orders table td {
   text-align: left;
   padding: 10px 9px;
   border-bottom: 1px solid #ddd;
@@ -1992,12 +2011,29 @@ img {
   padding: 7px 9px;
   margin-right: 5px;
   background: #6eb48c;
+  display: inline-block;
+  border: none;
+  outline: none;
   color: #fff;
 }
 
 .btn-link:hover {
   color: #fff;
   background: #666;
+}
+
+.form-control {
+  width: 100%;
+  border: 1px solid #ddd;
+  outline: none;
+  padding: 7px 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(62, 226, 111, 0.5);
+          box-shadow: 0 0 0 3px rgba(62, 226, 111, 0.5);
 }
 
 /* footer content */
@@ -2009,11 +2045,116 @@ img {
   margin-bottom: 29px;
 }
 
+/* footer css */
 footer {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
   width: 100%;
-  padding: 50px 40px;
+  background: linear-gradient(101deg, #242d53, #184846);
+  padding: 32px;
+  color: #fff;
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.footer-content div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-layout h2.title {
+  color: rgba(255, 255, 255, 0.38);
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.follows-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.follows-item a {
+  width: 50%;
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.feedback {
+  position: fixed;
+  left: 15px;
+  bottom: 40px;
+}
+
+.feedback .feedback-icon {
+  display: inline-block;
+}
+
+.feedback .feedback-icon img {
+  width: 50px;
+  -webkit-animation: feedback 2s ease infinite;
+          animation: feedback 2s ease infinite;
+}
+
+@-webkit-keyframes feedback {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes feedback {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.center {
+  display: block;
   text-align: center;
 }
 
@@ -2042,5 +2183,35 @@ footer {
   display: block;
   margin-top: 10px;
   color: #666;
+}
+
+.feedback-input {
+  margin: 10px 0;
+}
+
+.feedback-input p {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #777;
+  font-weight: 600;
+}
+
+.btn-fb {
+  width: 50%;
+  display: block;
+  background: #6eb48c;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-fb:hover {
+  background: #939393;
 }
 /*# sourceMappingURL=style.css.map */
